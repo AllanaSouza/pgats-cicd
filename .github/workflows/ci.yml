@@ -3,7 +3,7 @@ name:  CI -  Testes  Automatizados
 on:
     push:
       branches:  [  "main"  ]
-   pull_request:
+    pull_request:
        branches: [  "main"  ]
 
 jobs:
@@ -12,15 +12,15 @@ jobs:
 
        steps:
           -  name: Checkout  do  código
-              uses: actions/checkout@v3
+             uses: actions/checkout@v3
 
           -  name:  Configurar  Node.js
              uses:  actions/setup-node@v3
-              with:
+             with:
                  node-version:  '18'
 
           -  name: Instalar  dependências
-              run:  npm install
-
+             run:  npm install
+          
           -  name:  Executar  testes
              run:  npm  test
